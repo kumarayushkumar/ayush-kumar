@@ -1,6 +1,53 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('/fonts/ppeditorialold-regular.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'PP Editorial Old';
+  src: url('/fonts/ppeditorialold-ultrabold.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Futura Heavy';
+  src: url('/fonts/futura-heavy.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Aber Mono';
+  src: url('/fonts/Aber-Mono-Regular.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Aber Mono';
+  src: url('/fonts/Aber-Mono-Bold.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 700;
+}
+
 @theme {
-  --color-white: #ffffff;
-  --color-black: 0 0 0;
+  --font-sans: sans-serif;
+  --font-mono: 'Aber Mono', monospace;
+  --font-logo: 'Futura Heavy', sans-serif;
+
+  --font-highlight: 'PP Editorial Old', sans-serif;
+
+  --color-white: #f7f6f2;
+  --color-black: #131313;
+  --color-blue: #1e40af;
+  --color-growigh: #fead0b;
+}
+
+.wrapper {
+  @apply container mx-auto flex;
 }

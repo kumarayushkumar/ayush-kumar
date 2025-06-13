@@ -1,5 +1,7 @@
 ---
 import '../assets/styles/global.css'
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
 
 interface Props {
   title: string
@@ -63,7 +65,9 @@ const canonicalURL = new URL(
     <link rel="canonical" href={canonicalURL} />
   </head>
 
-  <body class="bg-white text-black-1 font-[350] relative">
+  <body class="bg-black text-zinc-500/80 font-sans relative">
+    <Header />
     <slot />
+    <Footer />
   </body>
 </html>
