@@ -8,7 +8,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "start": "astro build && astro preview --host",
-    "fw": "prettier --write \"**/*.{ts,tsx,md}\""
+    "fw": "prettier --write \"**/*.{ts,tsx,md,astro}\""
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.4.0",
