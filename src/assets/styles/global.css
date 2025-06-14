@@ -51,3 +51,7 @@
 .wrapper {
   @apply container mx-auto flex;
 }
+
+p {
+  @apply leading-[115%];
+}

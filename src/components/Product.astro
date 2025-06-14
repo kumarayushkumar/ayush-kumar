@@ -1,0 +1,37 @@
+---
+import { Picture } from 'astro:assets'
+import { product } from '../data/product'
+---
+
+<section id="hero" class="hero">
+  <div class="wrapper flex-col mt-40">
+    <div class="text-5xl font-semibold text-gray-100">Launched so far</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+      {
+        product.map(item => (
+          <div class="flex flex-col">
+            <Picture
+              src={item.image}
+              alt="Product logo"
+              class="w-auto object-contain"
+              loading="lazy"
+              fallbackFormat="png"
+              formats={['avif', 'webp']}
+              draggable="false"
+            />
+            <div class="font-light mt-4 text-gray-300 font-mono flex flex-col gap-1">
+              <p class="text-xl">{item.name}</p>
+              <p class="leading-[105%]">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <p class="font-bold text-5xl mt-32">
+      I believe that knowing how to sell and tell your story is as important as
+      building a great product. That's why I spend my time learning business
+      strategy, understanding human psychology, and reading books on design,
+      storytelling, and startups.
+    </p>
+  </div>
+</section>
