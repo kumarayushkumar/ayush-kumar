@@ -3,13 +3,16 @@ import { Picture } from 'astro:assets'
 import { product } from '../data/product'
 ---
 
-<section id="hero" class="hero">
-  <div class="wrapper flex-col mt-40">
-    <div class="text-5xl font-semibold text-gray-100">Launched so far</div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+<section id="product">
+  <div class="wrapper flex-col mt-48">
+    <h2 class="font-semibold text-zinc-200">Launched so far</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
       {
         product.map(item => (
-          <div class="flex flex-col">
+          <a
+            href={item.liveLink}
+            target="_blank"
+            class="flex flex-col custom-cursor transition-all duration-200">
             <Picture
               src={item.image}
               alt="Product logo"
@@ -19,15 +22,15 @@ import { product } from '../data/product'
               formats={['avif', 'webp']}
               draggable="false"
             />
-            <div class="font-light mt-4 text-gray-300 font-mono flex flex-col gap-1">
-              <p class="text-xl">{item.name}</p>
-              <p class="leading-[105%]">{item.description}</p>
+            <div class="mt-4 text-zinc-300 font-mono flex flex-col gap-1">
+              <p class="font-medium text-xl">{item.name}</p>
+              <p class="leading-[105%] text-base">{item.description}</p>
             </div>
-          </div>
+          </a>
         ))
       }
     </div>
-    <p class="font-bold text-5xl mt-32">
+    <p class="font-bold mt-32">
       I believe that knowing how to sell and tell your story is as important as
       building a great product. That's why I spend my time learning business
       strategy, understanding human psychology, and reading books on design,

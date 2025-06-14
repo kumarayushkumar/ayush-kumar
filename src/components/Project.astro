@@ -1,0 +1,56 @@
+---
+import { Picture } from 'astro:assets'
+import { contact } from '../data/contact'
+import { project } from '../data/project'
+---
+
+<section id="product">
+  <div class="wrapper flex-col mt-48">
+    <h2 class="font-semibold text-3xl text-zinc-200">College Work</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      {
+        project.map(item => (
+          <div class="flex flex-col">
+            <Picture
+              src={item.image}
+              alt="Product logo"
+              class="w-auto object-contain"
+              loading="lazy"
+              fallbackFormat="png"
+              formats={['avif', 'webp']}
+              draggable="false"
+            />
+            <div class="mt-4 text-zinc-300 font-mono flex flex-col gap-1">
+              <p class="text-xl font-medium">{item.name}</p>
+              <p class="leading-[105%] text-base">{item.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="flex w-full justify-end items-end mt-10 font-bold">
+      <a href={contact.social.github} target="_blank" class="text-xl border-b"
+        >More on Github</a
+      >
+    </div>
+    <p class="font-bold mt-40">
+      I have loved learning and building things since childhood, whether it was
+      experimenting with code, IoT projects or creating small projects just for
+      fun. That curiosity turned into a passion, and over the years, Now I'm
+      building more stuff.
+    </p>
+    <p class="font-bold mt-10">
+      I post on <a
+        href="https://www.linkedin.com/in/ayushkumarkumar/"
+        target="_blank"
+        class="text-white"
+        rel="noopener">LinkedIn</a
+      > and write a blog on <a
+        href="https://growigh.com/blogs/"
+        target="_blank"
+        class="text-white font-logo"
+        rel="noopener">Gro<span class="text-growigh">w</span>igh</a
+      >.
+    </p>
+  </div>
+</section>

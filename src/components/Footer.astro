@@ -1,0 +1,47 @@
+---
+import { contact } from '../data/contact'
+---
+
+<footer class="mt-56" id="footer">
+  <div class="wrapper flex-col">
+    <hr class="" />
+    <p class="mt-6 text-2xl font-bold">
+      Feel free to reach out—I'm always ready to meet new people.
+    </p>
+    <hr class="mt-24" />
+    <div class="flex mt-6 gap-40">
+      <div class="flex flex-col gap-1 text-xl">
+        <p class="text-zinc-400">Email</p>
+        <a
+          href={`mailto:${contact.email}`}
+          class="font-normal hover:text-white duration-200 transition-all"
+          aria-label="Email us">{contact.email}</a
+        >
+      </div>
+      <div class="flex flex-col gap-1 text-xl">
+        <p class="text-zinc-400">Phone</p>
+        <p
+          class="font-normal hover:text-white duration-200 transition-all cursor-pointer">
+          {contact.phone}
+        </p>
+      </div>
+    </div>
+    <hr class="mt-24" />
+    <div class="mt-6 flex">
+      {
+        Object.entries(contact.social).map(([key, value]) => (
+          <a
+            href={value}
+            target="_blank"
+            class="text-base font-normal text-zinc-300 hover:text-white transition-colors duration-300 mr-6"
+            aria-label={`Follow me on ${key}`}>
+            {key.charAt(0).toUpperCase() + key.slice(1)}
+          </a>
+        ))
+      }
+    </div>
+    <div class="mt-64 mb-10 text-sm font-light">
+      &copy;{new Date().getFullYear()} AYUSHKUMAR
+    </div>
+  </div>
+</footer>

@@ -16,7 +16,7 @@ const canonicalURL = new URL(
 ---
 
 <!doctype html>
-<html lang="en" class="antialiased">
+<html lang="en" class="antialiased scroll-smooth">
   <head>
     <title>{title}</title>
     <meta charset="UTF-8" />
@@ -65,7 +65,7 @@ const canonicalURL = new URL(
     <link rel="canonical" href={canonicalURL} />
   </head>
 
-  <body class="bg-black text-zinc-500/80 font-sans relative">
+  <body class="bg-black text-zinc-500 font-sans text-4xl relative">
     <Header />
     <slot />
     <Footer />
