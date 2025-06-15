@@ -48,7 +48,7 @@
 }
 
 .wrapper {
-  @apply container mx-auto flex;
+  @apply container mx-auto flex px-6;
 }
 
 p {

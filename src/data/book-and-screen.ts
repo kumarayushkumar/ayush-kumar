@@ -12,7 +12,7 @@ export const books = [
   'Refactoring UI',
   'Thinking with Type',
   'User friendly',
-  'Universal Principles of Design',
+  'Universal Principles of Design'
 ]
 
 export const screens = [

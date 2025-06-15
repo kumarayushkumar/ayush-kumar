@@ -6,7 +6,9 @@ import { project } from '../data/project'
 
 <section id="product">
   <div class="wrapper flex-col mt-48">
-    <h2 class="font-semibold text-3xl text-zinc-200">College Work</h2>
+    <h2 class="font-semibold text-xl md:text-3xl text-zinc-200">
+      College Work
+    </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
       {
         project.map(item => (
@@ -21,16 +23,20 @@ import { project } from '../data/project'
               draggable="false"
             />
             <div class="mt-4 text-zinc-300 font-mono flex flex-col gap-1">
-              <p class="text-xl font-medium">{item.name}</p>
-              <p class="leading-[105%] text-base">{item.description}</p>
+              <p class="text-lg md:text-xl font-medium">{item.name}</p>
+              <p class="leading-[105%] text-xs md:text-base">
+                {item.description}
+              </p>
             </div>
           </div>
         ))
       }
     </div>
     <div class="flex w-full justify-end items-end mt-10 font-bold">
-      <a href={contact.social.github} target="_blank" class="text-xl border-b"
-        >More on Github</a
+      <a
+        href={contact.social.github}
+        target="_blank"
+        class="text-base md:text-xl border-b">More on Github</a
       >
     </div>
     <p class="font-bold mt-40">

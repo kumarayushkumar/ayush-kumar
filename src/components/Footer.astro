@@ -5,12 +5,12 @@ import { contact } from '../data/contact'
 <footer class="mt-56" id="footer">
   <div class="wrapper flex-col">
     <hr class="" />
-    <p class="mt-6 text-2xl font-bold">
+    <p class="mt-6 text-lg md:text-2xl font-bold">
       Feel free to reach out—I'm always ready to meet new people.
     </p>
     <hr class="mt-24" />
-    <div class="flex mt-6 gap-40">
-      <div class="flex flex-col gap-1 text-xl">
+    <div class="flex flex-col md:flex-row mt-6 gap-10 md:gap-40">
+      <div class="flex flex-col gap-1 text-sm md:text-xl">
         <p class="text-zinc-400">Email</p>
         <a
           href={`mailto:${contact.email}`}
@@ -18,7 +18,7 @@ import { contact } from '../data/contact'
           aria-label="Email us">{contact.email}</a
         >
       </div>
-      <div class="flex flex-col gap-1 text-xl">
+      <div class="flex flex-col gap-1 text-sm md:text-xl">
         <p class="text-zinc-400">Phone</p>
         <p
           class="font-normal hover:text-white duration-200 transition-all cursor-pointer">
@@ -33,14 +33,14 @@ import { contact } from '../data/contact'
           <a
             href={value}
             target="_blank"
-            class="text-base font-normal text-zinc-300 hover:text-white transition-colors duration-300 mr-6"
+            class="text-sm md:text-base font-normal text-zinc-300 hover:text-white transition-colors duration-300 mr-6"
             aria-label={`Follow me on ${key}`}>
             {key.charAt(0).toUpperCase() + key.slice(1)}
           </a>
         ))
       }
     </div>
-    <div class="mt-64 mb-10 text-sm font-light">
+    <div class="mt-64 mb-10 text-xs md:text-sm font-light">
       &copy;{new Date().getFullYear()} AYUSHKUMAR
     </div>
   </div>

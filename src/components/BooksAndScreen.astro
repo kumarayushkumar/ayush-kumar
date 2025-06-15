@@ -4,17 +4,20 @@ import { books, screens } from '../data/book-and-screen'
 
 <section id="reads-and-watches">
   <div class="wrapper flex-col mt-64">
-    <h2 class="font-semibold text-3xl text-zinc-200">Book & Screen</h2>
-    <div class="mt-8 text-sm font-mono flex gap-10 md:gap-20 lg:gap-32">
+    <h2 class="font-semibold text-xl md:text-3xl text-zinc-200">
+      Books & Screens
+    </h2>
+    <div
+      class="mt-8 text-sm font-mono flex flex-col md:flex-row gap-10 md:gap-20 lg:gap-32">
       <div class="flex flex-col">
-        <p class="text-xl text-zinc-400">Books</p>
-        <ol class="mt-2 text-base leading-[100%]">
+        <p class="text-base md:text-xl text-zinc-400">Books</p>
+        <ol class="mt-2 text-xs md:text-base leading-[100%]">
           {books.map(book => <li class="mt-2 text-zinc-500">{book}</li>)}
         </ol>
       </div>
       <div class="flex flex-col">
-        <p class="text-xl text-zinc-400">Screens</p>
-        <ol class="mt-2 text-base leading-[100%]">
+        <p class="text-sm md:text-xl text-zinc-400">Screens</p>
+        <ol class="mt-2 text-xs md:text-base leading-[100%]">
           {screens.map(screen => <li class="mt-2 text-zinc-500">{screen}</li>)}
         </ol>
       </div>
