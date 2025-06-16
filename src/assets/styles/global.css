@@ -1,31 +1,17 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'PP Editorial Old';
-  src: url('/fonts/ppeditorialold-regular.woff2') format('woff2');
+  font-family: 'Helvetica';
+  src: url('/fonts/Helvetica.woff2') format('woff2');
   font-display: swap;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'PP Editorial Old';
-  src: url('/fonts/ppeditorialold-ultrabold.woff2') format('woff2');
+  font-family: 'Helvetica';
+  src: url('/fonts/helvetica-bold.woff2') format('woff2');
   font-display: swap;
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: 'Futura Heavy';
-  src: url('/fonts/futura-heavy.woff2') format('woff2');
-  font-display: swap;
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: 'Aber Mono';
-  src: url('/fonts/Aber-Mono-Regular.woff2') format('woff2');
-  font-display: swap;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 @font-face {
@@ -35,13 +21,10 @@
 }
 
 @theme {
-  --font-sans: sans-serif;
+  --font-sans: 'Helvetic',sans-serif;
   --font-mono: 'Source Code Pro', monospace;
-  --font-logo: 'Futura Heavy', sans-serif;
 
-  --font-highlight: 'PP Editorial Old', sans-serif;
-
-  --color-white: #f7f6f2;
+  --color-white: #f0ede6;
   --color-black: #131313;
   --color-blue: #1e40af;
   --color-growigh: #fead0b;
