@@ -1,17 +1,24 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'Helvetica';
-  src: url('/fonts/Helvetica.woff2') format('woff2');
+  font-family: 'Shone';
+  src: url('/fonts/sohne.woff2') format('woff2');
   font-display: swap;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Helvetica';
-  src: url('/fonts/helvetica-bold.woff2') format('woff2');
+  font-family: 'Shone';
+  src: url('/fonts/sohne-medium.woff2') format('woff2');
   font-display: swap;
-  font-weight: 700;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Shone';
+  src: url('/fonts/sohne-semibold.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 600;
 }
 
 @font-face {
@@ -21,7 +28,7 @@
 }
 
 @theme {
-  --font-sans: 'Helvetic',sans-serif;
+  --font-sans: 'Shone',sans-serif;
   --font-mono: 'Source Code Pro', monospace;
 
   --color-white: #f0ede6;

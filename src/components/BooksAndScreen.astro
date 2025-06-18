@@ -10,15 +10,23 @@ import { books, screens } from '../data/book-and-screen'
     <div
       class="mt-8 text-sm font-mono flex flex-col md:flex-row gap-10 md:gap-20 lg:gap-32">
       <div class="flex flex-col">
-        <p class="text-base md:text-xl text-zinc-400">Books</p>
+        <p class="text-base md:text-xl text-zinc-400 font-medium">Books</p>
         <ol class="mt-2 text-xs md:text-base leading-[100%]">
-          {books.map(book => <li class="mt-2 text-zinc-500">{book}</li>)}
+          {
+            books.map(book => (
+              <li class="mt-2 font-normal text-zinc-500">{book}</li>
+            ))
+          }
         </ol>
       </div>
       <div class="flex flex-col">
-        <p class="text-sm md:text-xl text-zinc-400">Screens</p>
+        <p class="text-sm md:text-xl text-zinc-400 font-medium">Screens</p>
         <ol class="mt-2 text-xs md:text-base leading-[100%]">
-          {screens.map(screen => <li class="mt-2 text-zinc-500">{screen}</li>)}
+          {
+            screens.map(screen => (
+              <li class="mt-2 font-normal text-zinc-500">{screen}</li>
+            ))
+          }
         </ol>
       </div>
     </div>
