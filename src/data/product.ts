@@ -1,16 +1,11 @@
 import test from '../assets/images/test.png'
+import postai from '../assets/images/postai.png'
 
 export const product = [
   {
-    name: 'Comment AI',
-    liveLink: '',
-    image: test,
-    downloads: 0
-  },
-  {
-    name: 'Hire Ai',
-    liveLink: '',
-    image: test,
+    name: 'Post AI',
+    liveLink: 'https://postai.space',
+    image: postai,
     downloads: 0
   }
 ]

@@ -42,7 +42,7 @@
 }
 
 p {
-  @apply leading-[125%];
+  @apply leading-[130%];
 }
 
 .custom-cursor {
