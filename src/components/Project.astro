@@ -16,13 +16,13 @@ import { project } from '../data/project'
             <Picture
               src={item.image}
               alt="Product logo"
-              class="w-auto object-contain"
+              class="w-auto object-contain grayscale hover:grayscale-0 transition-all duration-[400ms] ease-in-out"
               loading="lazy"
               fallbackFormat="png"
               formats={['avif', 'webp']}
               draggable="false"
             />
-            <div class="mt-4 text-zinc-300 font-mono flex flex-col gap-1">
+            <div class="mt-3 text-zinc-300 font-mono pl-1 flex flex-col gap-1">
               <p class="text-lg md:text-xl font-medium">{item.name}</p>
               <p class="leading-[105%] font-normal text-xs md:text-base">
                 {item.description}
