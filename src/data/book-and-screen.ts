@@ -25,5 +25,6 @@ export const screens = [
   'Pirates of Silicon Valley',
   'How to become a tyrant',
   'Nike',
-  'The Billion Dollar Code'
+  'The Billion Dollar Code',
+  'The man who knew infinity',
 ]
