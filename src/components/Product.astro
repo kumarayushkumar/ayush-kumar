@@ -12,10 +12,11 @@ import { product } from '../data/product'
           <a
             href={item.liveLink}
             target="_blank"
-            class="flex flex-col custom-cursor transition-all duration-200">
+            rel="noopener"
+            class={`flex flex-col ${item.liveLink ? 'custom-cursor' : ''} transition-all duration-200`}>
             <Picture
               src={item.image}
-              alt="Product logo"
+              alt="Product visual"
               class="w-auto object-contain"
               loading="lazy"
               fallbackFormat="png"

@@ -26,5 +26,5 @@ export const screens = [
   'How to become a tyrant',
   'Nike',
   'The Billion Dollar Code',
-  'The man who knew infinity',
+  'The man who knew infinity'
 ]

@@ -6,16 +6,18 @@ import { project } from '../data/project'
 
 <section id="product">
   <div class="wrapper flex-col mt-48">
-    <h2 class="font-semibold text-xl md:text-3xl text-zinc-200">
-      College Work
-    </h2>
+    <h2 class="font-semibold text-xl md:text-3xl text-zinc-200">Projects</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
       {
         project.map(item => (
-          <div class="flex flex-col">
+          <a
+            href={item.liveLink}
+            target="_blank"
+            rel="noopener"
+            class={`flex flex-col ${item.liveLink ? 'custom-cursor' : ''}`}>
             <Picture
               src={item.image}
-              alt="Project logo"
+              alt="Project visual"
               class="w-auto object-contain grayscale hover:grayscale-0 transition-all duration-[400ms] ease-in-out"
               loading="lazy"
               fallbackFormat="png"
@@ -28,7 +30,7 @@ import { project } from '../data/project'
                 {item.description}
               </p>
             </div>
-          </div>
+          </a>
         ))
       }
     </div>
