@@ -2,7 +2,15 @@ import postai from '../assets/images/product/postai.png'
 import uianalyzer from '../assets/images/product/uianalyzer.png'
 import travkaro from '../assets/images/product/travkaro.png'
 
-export const product = [
+type Product = {
+  name: string;
+  description?: string;
+  liveLink?: string;
+  image: ImageMetadata;
+  downloads?: number;
+}
+
+export const product: Product[] = [
   {
     name: 'Travkaro',
     description: 'Instagram for travel',

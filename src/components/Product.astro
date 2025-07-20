@@ -4,31 +4,48 @@ import { product } from '../data/product'
 ---
 
 <section id="product">
-  <div class="wrapper flex-col mt-48">
+  <div class="wrapper flex-col mt-48 font-medium">
     <h2 class="font-semibold text-zinc-200">Launched so far</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-      {
-        product.map(item => (
-          <a
-            href={item.liveLink}
-            target="_blank"
-            rel="noopener"
-            class={`flex flex-col ${item.liveLink ? 'custom-cursor' : ''} transition-all duration-200`}>
-            <Picture
-              src={item.image}
-              alt="Product visual"
-              class="w-auto object-contain"
-              loading="lazy"
-              fallbackFormat="png"
-              formats={['avif', 'webp']}
-              draggable="false"
-            />
-            <div class="mt-4 text-zinc-300 font-mono flex flex-col gap-1">
-              <p class="font-medium text-lg md:text-xl">{item.name}</p>
-            </div>
-          </a>
-        ))
-      }
+    <div class="flex gap-20 mt-8">
+      <div id="product-display" class="flex-4/5">
+        {
+          product.map((item, index) => (
+            <a
+              href={item.liveLink}
+              target="_blank"
+              rel="noopener"
+              class={`product-item flex gap-3 ${item.liveLink ? 'custom-cursor' : ''} ${index === 0 ? '' : 'hidden'}`}
+              data-index={index}>
+              <div class="flex-3/4">
+                <Picture
+                  src={item.image}
+                  alt="Product visual"
+                  class="w-auto object-contain"
+                  loading="lazy"
+                  fallbackFormat="png"
+                  formats={['avif', 'webp']}
+                  draggable="false"
+                />
+              </div>
+              <div class="font-mono flex flex-col gap-1 flex-1/4">
+                <p class="font-medium text-base">{item.name}</p>
+                <p class="text-sm">{item.description}</p>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+      <div class="flex-1/5">
+        {
+          product.map((item, index) => (
+            <p
+              id={`product-${index}`}
+              class={`text-base font-mono product-indicator ${index === 0 ? 'text-zinc-300' : 'text-zinc-500'}`}>
+              {index + 1} {item.name}
+            </p>
+          ))
+        }
+      </div>
     </div>
     <p class="mt-40">
       I Believe that knowing How to Sell and tell your Story is as Important as
@@ -38,3 +55,57 @@ import { product } from '../data/product'
     </p>
   </div>
 </section>
+
+<script>
+  let currentProductIndex = 0
+  const productItems = document.querySelectorAll('.product-item')
+  const productIndicators = document.querySelectorAll('.product-indicator')
+  const totalProducts = productItems.length
+  let intervalId: ReturnType<typeof setInterval> | null = null
+  let isPaused = false
+
+  function showProduct(index: number) {
+    productItems.forEach((item, i) => {
+      if (i === index) {
+        item.classList.remove('hidden')
+      } else {
+        item.classList.add('hidden')
+      }
+    })
+
+    productIndicators.forEach((indicator, i) => {
+      if (i === index) {
+        indicator.classList.remove('text-zinc-500')
+        indicator.classList.add('text-zinc-300')
+      } else {
+        indicator.classList.remove('text-zinc-300')
+        indicator.classList.add('text-zinc-500')
+      }
+    })
+  }
+
+  function cycleProducts() {
+    if (!isPaused) {
+      currentProductIndex = (currentProductIndex + 1) % totalProducts
+      showProduct(currentProductIndex)
+    }
+  }
+
+  function startCycling() {
+    if (totalProducts > 1 && !intervalId) {
+      intervalId = setInterval(cycleProducts, 2000)
+    }
+  }
+
+  productItems.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
+      isPaused = true
+    })
+    
+    item.addEventListener('mouseleave', () => {
+      isPaused = false
+    })
+  })
+
+  startCycling()
+</script>
