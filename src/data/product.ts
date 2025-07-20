@@ -19,12 +19,14 @@ export const product: Product[] = [
   {
     name: 'Post AI',
     liveLink: 'https://postai.space',
+    description: 'AI powered social media post generator',
     image: postai,
     downloads: 0
   },
   {
     name: 'UI Analyser',
     liveLink: 'https://uianalyser.in',
+    description: 'AI powered UI analysis tool',
     image: uianalyzer,
     downloads: 0
   }

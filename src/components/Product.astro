@@ -7,16 +7,16 @@ import { product } from '../data/product'
   <div class="wrapper flex-col mt-48 font-medium">
     <h2 class="font-semibold text-zinc-200">Launched so far</h2>
     <div class="flex gap-20 mt-8">
-      <div id="product-display" class="flex-4/5">
+      <div id="product-display" class="lg:flex-4/5">
         {
           product.map((item, index) => (
             <a
               href={item.liveLink}
               target="_blank"
               rel="noopener"
-              class={`product-item flex gap-3 ${item.liveLink ? 'custom-cursor' : ''} ${index === 0 ? '' : 'hidden'}`}
+              class={`product-item flex flex-col sm:flex-row gap-3 ${item.liveLink ? 'custom-cursor' : ''} ${index === 0 ? '' : 'hidden'}`}
               data-index={index}>
-              <div class="flex-3/4">
+              <div class="sm:flex-3/4">
                 <Picture
                   src={item.image}
                   alt="Product visual"
@@ -27,15 +27,14 @@ import { product } from '../data/product'
                   draggable="false"
                 />
               </div>
-              <div class="font-mono flex flex-col gap-1 flex-1/4">
-                <p class="font-medium text-base">{item.name}</p>
+              <div class="font-mono flex flex-col gap-1 sm:flex-1/4">
                 <p class="text-sm">{item.description}</p>
               </div>
             </a>
           ))
         }
       </div>
-      <div class="flex-1/5">
+      <div class="hidden lg:block lg:flex-1/5">
         {
           product.map((item, index) => (
             <p
