@@ -3,11 +3,11 @@ import uianalyzer from '../assets/images/product/uianalyzer.png'
 import travkaro from '../assets/images/product/travkaro.png'
 
 type Product = {
-  name: string;
-  description?: string;
-  liveLink?: string;
-  image: ImageMetadata;
-  downloads?: number;
+  name: string
+  description?: string
+  liveLink?: string
+  image: ImageMetadata
+  downloads?: number
 }
 
 export const product: Product[] = [
