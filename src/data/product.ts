@@ -13,7 +13,7 @@ type Product = {
 export const product: Product[] = [
   {
     name: 'Travkaro',
-    description: 'Instagram for travel',
+    description: "Instagram for travel, dropped it in between. It impossible to bring people on a new social media without a lot of money",
     image: travkaro
   },
   {
@@ -24,9 +24,9 @@ export const product: Product[] = [
     downloads: 0
   },
   {
-    name: 'UI Analyser',
+    name: 'UI Analyzer',
     liveLink: 'https://uianalyzer.in',
-    description: 'AI powered UI analysis tool',
+    description: "Analyse your website's UI and get suggestions to improve it. It's Open Source project",
     image: uianalyzer,
     downloads: 0
   }
