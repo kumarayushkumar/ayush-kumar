@@ -25,7 +25,7 @@ export const product: Product[] = [
   },
   {
     name: 'UI Analyser',
-    liveLink: 'https://uianalyser.in',
+    liveLink: 'https://uianalyzer.in',
     description: 'AI powered UI analysis tool',
     image: uianalyzer,
     downloads: 0
