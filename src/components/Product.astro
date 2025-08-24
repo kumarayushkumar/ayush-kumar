@@ -14,13 +14,13 @@ import { product } from '../data/product'
               href={item.liveLink}
               target="_blank"
               rel="noopener"
-              class={`product-item flex flex-col sm:flex-row gap-3 ${item.liveLink ? 'custom-cursor' : ''} ${index === 0 ? '' : 'hidden'}`}
+              class={`product-item flex flex-col sm:flex-row gap-3 ${item.liveLink ? 'group custom-cursor' : ''} ${index === 0 ? '' : 'hidden'}`}
               data-index={index}>
-              <div class="sm:flex-3/4">
+              <div class="sm:flex-3/4 overflow-hidden">
                 <Picture
                   src={item.image}
                   alt="Product visual"
-                  class="w-auto object-contain"
+                  class={`w-auto object-contain transition-transform duration-[400ms] ${item.liveLink ? 'group-hover:scale-[1.04]' : ''}`}
                   loading="lazy"
                   fallbackFormat="png"
                   formats={['avif', 'webp']}
@@ -28,7 +28,7 @@ import { product } from '../data/product'
                 />
               </div>
               <div class="font-mono flex flex-col gap-1 sm:flex-1/4">
-                <p class="text-sm">{item.description}</p>
+                <p class="text-sm md:text-base !leading-[140%] md:tracking-wide">{item.description}</p>
               </div>
             </a>
           ))

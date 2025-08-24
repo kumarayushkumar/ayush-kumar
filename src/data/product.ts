@@ -1,13 +1,13 @@
 import postai from '../assets/images/product/postai.png'
 import uianalyzer from '../assets/images/product/uianalyzer.png'
 import travkaro from '../assets/images/product/travkaro.png'
+import curlme from '../assets/images/product/curlme.png'
 
 type Product = {
   name: string
   description?: string
   liveLink?: string
   image: ImageMetadata
-  downloads?: number
 }
 
 export const product: Product[] = [
@@ -21,13 +21,17 @@ export const product: Product[] = [
     liveLink: 'https://postai.space',
     description: 'AI powered social media post generator',
     image: postai,
-    downloads: 0
   },
   {
     name: 'UI Analyzer',
     liveLink: 'https://uianalyzer.in',
     description: "Analyse your website's UI and get suggestions to improve it. It's Open Source project",
     image: uianalyzer,
-    downloads: 0
+  },
+   {
+    name: 'Curlme',
+    liveLink: 'https://curlme.dev',
+    description: "Place to vibe with other coder only from terminal twitter from terminal but only for developers.",
+    image: curlme,
   }
 ]
