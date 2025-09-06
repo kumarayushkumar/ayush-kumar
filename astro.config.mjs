@@ -5,7 +5,7 @@ import { defineConfig } from 'astro/config'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://ayushkumar.space/',
+  site: 'https://kumarayush.me/',
   vite: {
     plugins: [tailwindcss()]
   },

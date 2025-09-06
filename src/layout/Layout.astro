@@ -11,7 +11,7 @@ interface Props {
 const { title, description } = Astro.props
 const canonicalURL = new URL(
   Astro.url.pathname,
-  Astro.site || 'https://ayushkumar.space/'
+  Astro.site || 'https://kumarayush.me/'
 ).toString()
 ---
 
@@ -37,8 +37,8 @@ const canonicalURL = new URL(
     <meta property="og:type" content="website" />
     <meta property="og:image:alt" content="Logo of Ayush Kumar" />
     <!-- Minimum 1200x630 px -->
-    <meta property="og:image" content="https://ayushkumar.space/logo.png" />
-    <meta property="og:url" content="https://ayushkumar.space" />
+    <meta property="og:image" content="https://kumarayush.me/logo.png" />
+    <meta property="og:url" content="https://kumarayush.me" />
     <meta property="og:description" content={description} />
 
     <!-- Twitter Card Meta Tag -->
@@ -48,7 +48,7 @@ const canonicalURL = new URL(
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <!--  Minimum 1024x512 px -->
-    <meta name="twitter:image" content="https://ayushkumar.space/logo.png" />
+    <meta name="twitter:image" content="https://kumarayush.me/logo.png" />
 
     <!-- Apple Meta Tags -->
     <meta name="apple-mobile-web-app-title" content="AyushKumar" />
