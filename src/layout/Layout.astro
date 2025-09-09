@@ -63,12 +63,25 @@ const canonicalURL = new URL(
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="canonical" href={canonicalURL} />
-  </head>
 
-  <body
-    class="bg-black text-zinc-500 tracking-[0.5%] leading-[135%] font-sans font-semibold text-2xl md:text-4xl relative">
-    <Header />
-    <slot />
-    <Footer />
-  </body>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FKM1HFZ71K"
+    ></script>
+    <script>
+      // @ts-nocheck
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-FKM1HFZ71K')
+    </script>
+  </head>
 </html>
+
+<body
+  class="bg-black text-zinc-500 tracking-[0.5%] leading-[135%] font-sans font-semibold text-2xl md:text-4xl relative">
+  <Header />
+  <slot />
+  <Footer />
+</body>
