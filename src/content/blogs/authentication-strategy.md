@@ -1,8 +1,8 @@
 ---
 title: Implementing Production level Authentication with Refresh Tokens
-description: A comprehensive guide to implementing authentication for secure and seamless user authentication in web applications, using refresh tokens and access tokens.
+description: Implementing authentication for secure and seamless user authentication in applications, using refresh tokens and access tokens strategy.
 date: 2025-09-09
-readTime: 8
+readTime: 5
 slug: production-level-authentication
 ---
 

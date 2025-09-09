@@ -10,7 +10,7 @@ import { product } from '../../data/product'
       {
         product.map((item, index) => (
           <a
-            href={item.liveLink}
+            href={`${item.liveLink || '#'}`}
             target="_blank"
             rel="noopener"
             class={`product-item flex flex-col sm:flex-row gap-3 ${item.liveLink ? 'group custom-cursor' : ''} ${index === 0 ? '' : 'hidden'}`}
@@ -20,7 +20,6 @@ import { product } from '../../data/product'
                 src={item.image}
                 alt="Product visual"
                 class={`w-auto object-contain transition-transform duration-[400ms] ${item.liveLink ? 'group-hover:scale-[1.04]' : ''}`}
-                loading="lazy"
                 fallbackFormat="png"
                 formats={['avif', 'webp']}
                 draggable="false"

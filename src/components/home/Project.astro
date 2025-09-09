@@ -10,7 +10,7 @@ import { project } from '../../data/project'
     {
       project.map(item => (
         <a
-          href={item.liveLink}
+          href={`${item.liveLink || '#'}`}
           target="_blank"
           rel="noopener"
           class={`flex flex-col ${item.liveLink ? 'custom-cursor' : ''}`}>
@@ -35,7 +35,7 @@ import { project } from '../../data/project'
     <a
       href={contact.social.github}
       target="_blank"
-      class="text-sm md:text-lg border-b-[0.00625rem]">More on Github</a
+      class="text-sm md:text-lg border-b-[0.00625rem] text-zinc-400">More on Github</a
     >
   </div>
   <p class="mt-40">
