@@ -4,7 +4,7 @@ import { contact } from '../../data/link'
 import { project } from '../../data/project'
 ---
 
-<section id="product" class="wrapper flex-col mt-48">
+<section id="product" class="wrapper flex-col mt-60 2xl:mt-80">
   <h2 class="text-xl md:text-3xl text-zinc-200">Projects</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-8">
     {
@@ -39,7 +39,7 @@ import { project } from '../../data/project'
       >More on Github</a
     >
   </div>
-  <p class="mt-40">
+  <p class="mt-60 2xl:mt-80">
     I have Loved Learning and Building things since Childhood, whether it was
     Experimenting with Code, IoT projects or Creating small Projects just for
     fun. That Curiosity turned into a Passion, and over the years, Now I'm
@@ -47,12 +47,12 @@ import { project } from '../../data/project'
   </p>
   <p class="mt-10">
     I post on <a
-      href="https://www.linkedin.com/in/ayushkumarkumar/"
+      href={contact.social.twitter}
       target="_blank"
       class="text-white"
-      rel="noopener">LinkedIn</a
+      rel="noopener">Twitter</a
     > and write a blog on <a
-      href="https://growigh.com/blogs/"
+      href={contact.blog}
       target="_blank"
       class="text-white"
       rel="noopener">Gro<span class="text-growigh">w</span>igh</a

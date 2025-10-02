@@ -4,7 +4,8 @@ export const contact = {
     twitter: 'https://x.com/ayushkumarkeirn',
     linkedin: 'https://www.linkedin.com/in/ayushkumarkumar/',
     github: 'https://github.com/kumarayushkumar'
-  }
+  },
+  blog: 'https://growigh.com/blogs/'
 }
 
 export const figma =
