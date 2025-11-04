@@ -14,6 +14,7 @@ type Product = {
 export const product: Product[] = [
   {
     name: 'Ivaan',
+    liveLink: 'https://heyivaan.com',
     description:
       'Your Personal AI Meeting Assistant that remembers, connects and talks about all your meetings.',
     image: ivaan
