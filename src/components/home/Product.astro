@@ -23,6 +23,7 @@ import { product } from '../../data/product'
                 fallbackFormat="png"
                 formats={['avif', 'webp']}
                 draggable="false"
+                loading="eager"
               />
             </div>
             <div class="font-mono flex flex-col gap-1 sm:flex-1/4">
@@ -39,7 +40,7 @@ import { product } from '../../data/product'
         product.map((item, index) => (
           <p
             id={`product-${index}`}
-            class={`text-base font-mono product-indicator ${index === 0 ? 'text-zinc-300' : 'text-zinc-500'}`}>
+            class={`text-base font-mono product-indicator cursor-pointer hover:text-zinc-200 transition-colors ${index === 0 ? 'text-zinc-300' : 'text-zinc-500'}`}>
             {index + 1} {item.name}
           </p>
         ))
@@ -102,6 +103,18 @@ import { product } from '../../data/product'
 
     item.addEventListener('mouseleave', () => {
       isPaused = false
+    })
+  })
+
+  productIndicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      currentProductIndex = index
+      showProduct(currentProductIndex)
+      isPaused = true
+
+      setTimeout(() => {
+        isPaused = false
+      }, 3500)
     })
   })
 

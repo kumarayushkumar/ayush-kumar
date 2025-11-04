@@ -1,7 +1,7 @@
-import postai from '../assets/images/product/postai.png'
-import uianalyzer from '../assets/images/product/uianalyzer.png'
-import travkaro from '../assets/images/product/travkaro.png'
+import commentkit from '../assets/images/product/commentkit.png'
 import curlme from '../assets/images/product/curlme.png'
+import travkaro from '../assets/images/product/travkaro.png'
+import uianalyzer from '../assets/images/product/uianalyzer.png'
 
 type Product = {
   name: string
@@ -12,16 +12,12 @@ type Product = {
 
 export const product: Product[] = [
   {
-    name: 'Travkaro',
+    name: 'CommentKit',
+    liveLink:
+      'https://chromewebstore.google.com/detail/commentkit/bhaflkdicaedajhkeaipecfchdonglcn',
     description:
-      'Instagram for travel, dropped it in between. It impossible to bring people on a new social media without a lot of money',
-    image: travkaro
-  },
-  {
-    name: 'Post AI',
-    liveLink: 'https://postai.space',
-    description: 'AI powered social media post generator',
-    image: postai
+      'Commenting is best way to grow your LinkedIn. CommentKit is a free(forever) Chrome extension that can comments on posts 100+ for you.',
+    image: commentkit
   },
   {
     name: 'UI Analyzer',
@@ -36,5 +32,11 @@ export const product: Product[] = [
     description:
       'Place to vibe with other coder only from terminal twitter from terminal but only for developers.',
     image: curlme
+  },
+  {
+    name: 'Travkaro',
+    description:
+      'Instagram for travel, dropped it in between. It impossible to bring people on a new social media without a lot of money',
+    image: travkaro
   }
 ]
