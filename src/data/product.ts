@@ -2,6 +2,7 @@ import commentkit from '../assets/images/product/commentkit.png'
 import curlme from '../assets/images/product/curlme.png'
 import travkaro from '../assets/images/product/travkaro.png'
 import uianalyzer from '../assets/images/product/uianalyzer.png'
+import ivaan from '../assets/images/product/ivaan.png'
 
 type Product = {
   name: string
@@ -11,6 +12,12 @@ type Product = {
 }
 
 export const product: Product[] = [
+  {
+    name: 'Ivaan',
+    description:
+      'Your Personal AI Meeting Assistant that remembers, connects and talks about all your meetings.',
+    image: ivaan
+  },
   {
     name: 'CommentKit',
     liveLink:
