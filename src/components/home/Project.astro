@@ -10,10 +10,10 @@ import { project } from '../../data/project'
     {
       project.map(item => (
         <a
-          href={`${item.liveLink || '#'}`}
+          href={`${item.liveLink}`}
           target="_blank"
           rel="noopener"
-          class={`flex flex-col ${item.liveLink ? 'custom-cursor' : ''}`}>
+          class={`flex flex-col ${item.liveLink ? 'custom-cursor' : 'cursor-default'}`}>
           <Picture
             src={item.image}
             alt="Project visual"
