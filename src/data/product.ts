@@ -1,6 +1,5 @@
 import commentkit from '../assets/images/product/commentkit.png'
 import curlme from '../assets/images/product/curlme.png'
-import travkaro from '../assets/images/product/travkaro.png'
 import uianalyzer from '../assets/images/product/uianalyzer.png'
 import ivaan from '../assets/images/product/ivaan.png'
 
@@ -41,10 +40,5 @@ export const product: Product[] = [
       'Place to vibe with other coder only from terminal twitter from terminal but only for developers.',
     image: curlme
   },
-  {
-    name: 'Travkaro',
-    description:
-      'Instagram for travel, dropped it in between. It impossible to bring people on a new social media without a lot of money',
-    image: travkaro
-  }
+ 
 ]
